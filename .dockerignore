@@ -1,0 +1,28 @@
+# Docker
+__pycache__/
+*.pyc
+.pytest_cache/
+.env.local
+.env.*.local
+db.sqlite3
+
+# Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/

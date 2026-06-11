@@ -1,15 +1,19 @@
 import psycopg2
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 connection = None
 
 try:
     # 1. Connect to the database
     connection = psycopg2.connect(
-        user="postgres",
-        password="password",
-        host="localhost",
-        port="5432",
-        database="recruit_ai"
+        user=os.getenv("DB_USER", "postgres"),
+        password=os.getenv("DB_PASSWORD", "password"),
+        host=os.getenv("DB_HOST", "postgres"),
+        port=os.getenv("DB_PORT", "5432"),
+        database=os.getenv("DB_NAME", "recruit_ai")
     )
 
     # 2. Create cursor
